@@ -10,7 +10,7 @@ export const useSignup = ()=>{
     const signup = async (email,password)=>{
         setloading(true);
         // seterror(null);
-        const response = await fetch("http://localhost:4000/MERN/Auth/register",{
+        const response = await fetch("https://mern-gym-app-d753.onrender.com/MERN/Auth/register",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({email,password})
