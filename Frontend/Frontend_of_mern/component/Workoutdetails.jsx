@@ -8,7 +8,7 @@ export const Workoutdetails = ({details}) =>{
             
             return
         }
-        const response = await fetch('http://localhost:4000/MERN/' + details._id,{
+        const response = await fetch('https://mern-gym-app-d753.onrender.com/MERN/' + details._id,{
             method:'DELETE',
             headers:{
                 'Authorization':`Bearer ${user.token}`
