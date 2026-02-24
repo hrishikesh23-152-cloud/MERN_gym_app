@@ -9,7 +9,7 @@ export const Home = ()=>{
     useEffect(()=>{
 
         const fetchworkouts = async ()=>{
-            const response = await fetch("http://localhost:4000/MERN",{
+            const response = await fetch("https://mern-gym-app-d753.onrender.com/MERN",{
                 headers:{
                     'Authorization':`Bearer ${user.token}`
                 }
