@@ -1,0 +1,288 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --primary: rgb(155, 47, 226);
+  --secondary: #e53935;
+  --bg-light: whitesmoke;
+  --text-dark: #1c6464;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--primary);
+}
+
+header {
+  background-color: aliceblue;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .navsection {
+  max-width: 1460px;
+  padding: 20px 5px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navlink {
+  color: var(--primary);
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  /* margin-right: 10px; */
+}
+
+.navlink:hover,
+.navlink:active {
+  color: var(--secondary);
+}
+
+.pages {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 10px;
+  
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 500px));
+  gap: 40px;
+  justify-content: center;
+}
+
+.details {
+  border-radius: 15px;
+  background-color: var(--bg-light);
+  padding: 20px;
+  margin: 30px auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border: 2px palevioletred solid;
+  position: relative;
+}
+
+.details h3 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.details p {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: whitesmoke;
+}
+
+.error_h {
+  margin-top: 15px;
+  padding: 10px 14px;
+  color: #b71c1c;
+  background-color: #fdecea;
+  border-left: 4px solid red;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+
+.form h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form label {
+  font-weight: bold;
+}
+
+
+
+
+
+.form button:hover {
+  transform: scale(1.05);
+}
+
+
+
+/*  */
+
+.b:hover {
+  transform: scale(1.05);
+}
+.signup, .login{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.signup form, .login form ,.form {
+  box-shadow: 0px 0px 10px rgb(215, 212, 212);
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 10px;
+  background-color: rgb(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  width:400px;
+  
+}
+.signup form input, .login form input, .form  input{
+  width: 100%;
+  margin: 2px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px black solid;
+    font-size: larger;
+}
+.signup form button, .login  form button , .form button{
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: larger;
+  background-color: rgba(37, 175, 210, 0.1);
+  border: 2px black solid;
+}
+.signup h3, .login h3{
+  font-size: 2rem;
+  font-weight:bolder;
+}
+.three{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.three button{
+  padding: 6px;
+  border:2px solid var(--primary);
+  color: var(--primary);
+  border-radius:5px
+}
+.three span{
+  border: 2px solid var(--primary);
+  padding: 4px;
+  border-radius: 5px;
+}
+/* ================= RESPONSIVENESS ================= */
+
+/* Large tablets */
+@media (max-width: 1024px) {
+
+  header .navsection{
+    padding: 15px 20px;
+  }
+
+  .pages{
+    padding: 20px;
+  }
+
+  .home{
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+  }
+
+  .signup form,
+  .login form,
+  .form{
+    width: 80%;
+    margin-top: 60px;
+  }
+}
+
+
+/* Tablets */
+@media (max-width: 768px){
+
+  /* header .navsection{
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  } */
+
+  .home{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .details{
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .signup form,
+  .login form,
+  .form{
+    width: 90%;
+    padding: 25px;
+    margin-top: 40px;
+  }
+
+  .signup h3,
+  .login h3{
+    font-size: 1.6rem;
+  }
+
+  /* .three{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  } */
+}
+
+
+/* Mobile */
+@media (max-width: 480px){
+
+  header .navsection{
+    padding: 10px;
+  }
+
+  .navlink{
+    font-size: 0.8rem;
+  }
+
+  .details{
+    padding: 15px;
+  }
+
+  .details h3{
+    font-size: 1.1rem;
+  }
+
+  .signup form,
+  .login form,
+  .form{
+    width: 95%;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .signup form input,
+  .login form input,
+  .form input{
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .signup form button,
+  .login form button,
+  .form button{
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
