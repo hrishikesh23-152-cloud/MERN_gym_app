@@ -23,9 +23,9 @@ export const Workoutdetails = ({details}) =>{
     return(
         <div className="details">
             <h3>{details.title}</h3>
-            <p>Load:{details.load}</p>
+            <p>Load(Kg):{details.load}</p>
             <p>Reps:{details.reps}</p>
-            <p>Crated {details.createdAt}</p>
+            <p>Created at : {details.createdAt}</p>
             <button className="b" onClick={handledelete}>Delete</button>
         </div>
     )
